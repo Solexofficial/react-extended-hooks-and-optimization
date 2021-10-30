@@ -1,6 +1,6 @@
 import React from "react";
 const Divider = () => {
-    return <hr />;
+  return <hr />;
 };
 
 export default Divider;
