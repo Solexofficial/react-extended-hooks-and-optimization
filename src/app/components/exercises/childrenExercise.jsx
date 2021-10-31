@@ -3,12 +3,13 @@ import PropTypes from "prop-types";
 import CollapseWrapper from "../common/collapse";
 
 const OrderedListComponent = ({ children }) => {
-  return (
-    <ol>
-      {React.Children.map(children, (child) => {
-        return <li>{child}</li>;
-      })}
-    </ol>
+  const arrayOfChildren = React.Children.toArray(children);
+  console.log(arrayOfChildren);
+  return React.Children.map(arrayOfChildren, (child) =>
+    React.cloneElement(child, {
+      ...child.props,
+      id: +child.key.replace(".", "") + 1
+    })
   );
 };
 
@@ -36,8 +37,12 @@ const ChildrenExercise = () => {
   );
 };
 
-const Component = () => {
-  return <div>Компонент списка</div>;
+const Component = ({ id }) => {
+  console.log(id);
+  return <div>{id}. Компонент списка</div>;
+};
+Component.propTypes = {
+  id: PropTypes.oneOfType([PropTypes.number, PropTypes.string])
 };
 
 export default ChildrenExercise;
