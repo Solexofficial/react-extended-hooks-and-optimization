@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react-extended-hooks-and-optimization/static/css/main.6db5275d.chunk.css",
+    "main.js": "/react-extended-hooks-and-optimization/static/js/main.22f52981.chunk.js",
+    "main.js.map": "/react-extended-hooks-and-optimization/static/js/main.22f52981.chunk.js.map",
+    "runtime-main.js": "/react-extended-hooks-and-optimization/static/js/runtime-main.9ea63509.js",
+    "runtime-main.js.map": "/react-extended-hooks-and-optimization/static/js/runtime-main.9ea63509.js.map",
+    "static/css/2.feda8dcb.chunk.css": "/react-extended-hooks-and-optimization/static/css/2.feda8dcb.chunk.css",
+    "static/js/2.e41df43a.chunk.js": "/react-extended-hooks-and-optimization/static/js/2.e41df43a.chunk.js",
+    "static/js/2.e41df43a.chunk.js.map": "/react-extended-hooks-and-optimization/static/js/2.e41df43a.chunk.js.map",
+    "static/js/3.09d668ee.chunk.js": "/react-extended-hooks-and-optimization/static/js/3.09d668ee.chunk.js",
+    "static/js/3.09d668ee.chunk.js.map": "/react-extended-hooks-and-optimization/static/js/3.09d668ee.chunk.js.map",
+    "index.html": "/react-extended-hooks-and-optimization/index.html",
+    "static/css/2.feda8dcb.chunk.css.map": "/react-extended-hooks-and-optimization/static/css/2.feda8dcb.chunk.css.map",
+    "static/css/main.6db5275d.chunk.css.map": "/react-extended-hooks-and-optimization/static/css/main.6db5275d.chunk.css.map",
+    "static/js/2.e41df43a.chunk.js.LICENSE.txt": "/react-extended-hooks-and-optimization/static/js/2.e41df43a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9ea63509.js",
+    "static/css/2.feda8dcb.chunk.css",
+    "static/js/2.e41df43a.chunk.js",
+    "static/css/main.6db5275d.chunk.css",
+    "static/js/main.22f52981.chunk.js"
+  ]
+}
