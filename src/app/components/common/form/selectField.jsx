@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 
 const SelectField = ({
@@ -15,10 +15,6 @@ const SelectField = ({
   const getInputClasses = () => {
     return "form-select" + (error ? " is-invalid" : "");
   };
-
-  useEffect(() => {
-    console.log("render select field");
-  });
 
   const optionsArray =
     !Array.isArray(options) && typeof options === "object"

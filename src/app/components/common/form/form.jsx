@@ -17,15 +17,12 @@ const FormComponent = ({
     return Object.keys(errors).length === 0;
   };
 
-  const handleChange = useCallback(
-    (target) => {
-      setData((prevState) => ({
-        ...prevState,
-        [target.name]: target.value
-      }));
-    },
-    [setData]
-  );
+  const handleChange = useCallback((target) => {
+    setData((prevState) => ({
+      ...prevState,
+      [target.name]: target.value
+    }));
+  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
