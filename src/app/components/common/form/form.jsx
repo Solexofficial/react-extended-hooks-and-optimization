@@ -11,11 +11,14 @@ const FormComponent = ({
   const [data, setData] = useState(defaultData || {});
   const [errors, setErrors] = useState({});
 
-  const validate = () => {
-    const errors = validator(data, validatorConfig);
-    setErrors(errors);
-    return Object.keys(errors).length === 0;
-  };
+  const validate = useCallback(
+    (data) => {
+      const errors = validator(data, validatorConfig);
+      setErrors(errors);
+      return Object.keys(errors).length === 0;
+    },
+    [validatorConfig, setErrors]
+  );
 
   const handleChange = useCallback((target) => {
     setData((prevState) => ({
@@ -33,7 +36,7 @@ const FormComponent = ({
 
   useEffect(() => {
     if (Object.keys(data).length > 0) {
-      validate();
+      validate(data);
     }
   }, [data]);
 
