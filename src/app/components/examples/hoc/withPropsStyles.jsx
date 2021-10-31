@@ -4,7 +4,7 @@ import CardWrapper from "../../common/Card";
 const withPropsStyles = (Component) => (props) => {
   return (
     <CardWrapper>
-      <Component {...props} name="name with Props and Styles" />
+      <Component {...props} />
     </CardWrapper>
   );
 };
