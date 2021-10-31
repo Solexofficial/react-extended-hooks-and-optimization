@@ -34,6 +34,16 @@ const FormComponent = ({
     onSubmit(data);
   };
 
+  const handleKeyDown = useCallback((event) => {
+    if (event.keyCode === 13) {
+      event.preventDefault();
+      const form = event.target.form;
+      /* [...form.elements].indexOf(event.target) */
+      const indexField = Array.prototype.indexOf.call(form, event.target);
+      form.elements[indexField + 1].focus();
+    }
+  }, []);
+
   useEffect(() => {
     if (Object.keys(data).length > 0) {
       validate(data);
@@ -54,7 +64,8 @@ const FormComponent = ({
         ...child.props,
         onChange: handleChange,
         value: data[child.props.name] || "",
-        error: errors[child.props.name]
+        error: errors[child.props.name],
+        onKeyDown: handleKeyDown
       };
     }
     if (childType === "string") {
